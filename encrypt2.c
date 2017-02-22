@@ -56,7 +56,7 @@ int main(void)
 
 		if((strcmp(direntp -> d_name, ".") == 0)  && (strcmp(direntp -> d_name, "..") == 0))
 		{
-			fprintf(stderr, "Saltando Archivo %s", c_attrib.file);
+			fprintf(stderr, "Jumping Archive  %s", c_attrib.file);
 		}
 		else
 		if((strcmp(direntp -> d_name, ".") != 0)  && (strcmp(direntp -> d_name, "..") != 0))
